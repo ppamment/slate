@@ -91,3 +91,8 @@ img{
 .tab-content{
     overflow: visible;
 }
+
+.nav-pills>.active>a, .nav-pills>.active>a:hover, .nav-pills>.active>a:focus{
+    /*This is the backgound colour of the navigation pills on the individual artist page (works, biography) */
+    background-color: #eee;
+}
