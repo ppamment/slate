@@ -1,0 +1,89 @@
+body{
+    font-family: Verdana, Lato, Arial, sans-serif;
+    background-color: #FFFFFF;
+}
+body a, body a:hover {
+    color: #000;
+    text-decoration: none;
+}
+body a:hover {
+    color: grey !important;
+}
+.container {
+    margin-top: 50px;
+}
+.navigation {
+    margin-top: 48px;
+}
+.navigation a{
+    color: black;
+    margin-right:25px;
+}
+.navigation .active {
+    color: grey;
+}
+h1 {
+    font-size: 22px;
+    font-weight: normal;
+}
+.navigation h1{
+    text-align: right;
+}
+h2, h3{
+    font-weight: normal;
+}
+img{
+    margin:auto;
+}
+.section_header {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.section_header h2 {
+    line-height: 40px;
+}
+.section_header hr {
+    margin-top:28px;
+	border-top: 1px solid #BEC0C3;
+	border-bottom: 2px solid white;
+}
+.artists {
+    margin-top: 20px    ;
+}
+.artists .row {
+    margin-top: 20px;
+}
+.artists .well {
+    height: 300px;
+}
+.well .span3 {
+    margin-left: 18px;
+}
+
+.thumbnail {
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+
+.artists h4{
+    margin-bottom: 40px;
+}
+
+.img-container{
+    text-align: center;
+    height: 240px;
+    line-height: 240px;
+    background-color: #F5F5F5;
+}
+.img-container img{
+    margin: -3px auto 0px auto;
+    max-height: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+.thumbnails.artist li{
+    min-height: 440px;
+}

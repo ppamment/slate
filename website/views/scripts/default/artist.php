@@ -1,0 +1,44 @@
+<?php
+/** @var $artist Object_Artist */
+$artist = $this->artist;
+/** @var $artwork Object_Artwork */
+?>
+
+<div class="row section_header">
+    <div class="span4">
+        <hr/>
+    </div>
+    <div class="span4">
+        <h2><?php echo $artist->getName() ?></h2>
+    </div>
+    <div class="span4">
+        <hr/>
+    </div>
+</div>
+
+
+<ul class="thumbnails artist">
+    <?php foreach($artist->getChilds() as $artwork) : ?>
+    <li class="span3">
+        <a href="#img<?php echo $artwork->getId() ?>" data-toggle="lightbox">
+            <div class="thumbnail">
+                <div class="img-container">
+                    <img src="<?php echo $artwork->getImage()->getFullPath() ?>" />
+                </div>
+
+                <div class="caption">
+                    <h3><?php echo $artwork->getTitle() ?></h3>
+
+                    <p><?php echo $artwork->getDescription() ?></p>
+                </div>
+            </div>
+        </a>
+        <div id="img<?php echo $artwork->getId() ?>" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='lightbox-content'>
+                <img src="<?php echo $artwork->getImage()->getFullPath() ?>" />
+                <?php if($artwork->getCaption()) : ?><div class="lightbox-caption"><p><?php echo $artwork->getCaption() ?></p></div><?php endif; ?>
+            </div>
+        </div>
+    </li>
+    <?php endforeach; ?>
+</ul>

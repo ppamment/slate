@@ -1,0 +1,46 @@
+body{
+    font-family: Arial;
+    background: repeat left url("../img/body-bg.jpeg");
+}
+body a, body a:hover {
+    text-decoration: none;
+}
+body a:hover {
+    color: grey !important;
+}
+.container {
+    margin-top: 50px;
+}
+.navigation {
+    margin-top: 22px;
+}
+.navigation a{
+    color: black;
+    margin-right:25px;
+}
+.navigation .active {
+    color: grey;
+}
+h1 {
+    font-size: 30px;
+}
+.section_header {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.section_header h2 {
+    line-height: 40px;
+}
+.section_header hr {
+    margin-top:28px;
+	border-top: 1px solid #BEC0C3;
+	border-bottom: 2px solid white;
+}
+.thumbnail {
+    min-height: 390px;
+}
+.thumbnail img {
+    margin-top:10px;
+    height: 200px;
+}
