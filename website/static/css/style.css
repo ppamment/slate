@@ -38,7 +38,7 @@ img{
 .section_header {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 .section_header h2 {
     line-height: 40px;
@@ -86,4 +86,8 @@ img{
 }
 .thumbnails.artist li{
     min-height: 440px;
+}
+
+.tab-content{
+    overflow: visible;
 }
