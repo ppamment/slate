@@ -18,7 +18,7 @@
                 <div class="thumbnail">
                     <a class="" href="/<?php echo $this->document->getKey() ?>/<?php echo $artist->getKey() ?>">
                         <div class="img-container">
-                            <img src="<?php echo $artist->getCover()->getImage()->getFullPath() ?>" />
+                            <img src="<?php echo $artist->getCover()->getImage()->getThumbnail("grid-thumb") ?>" />
                         </div>
                         <div class="caption">
                             <h3><?php echo $artist->getName() ?></h3>

@@ -29,7 +29,7 @@ $artist = $this->artist;
                     <a href="#img<?php echo $artwork->getId() ?>" data-toggle="lightbox">
                         <div class="thumbnail">
                             <div class="img-container">
-                                <img src="<?php echo $artwork->getImage()->getFullPath() ?>" />
+                                <img src="<?php echo $artwork->getImage()->getThumbnail("grid-thumb") ?>" />
                             </div>
 
                             <div class="caption">
@@ -51,7 +51,7 @@ $artist = $this->artist;
     </div>
     <div class="tab-pane" id="bio">
         <div class="span6">
-            <img src="<?php echo $artist->getCover()->getImage()->getFullPath() ?>" />
+            <img src="<?php echo $artist->getCover()->getImage()->getThumbnail("grid-thumb") ?>" />
         </div>
         <div class="span5">
             <p><?php echo $artist->getBio() ?></p>
