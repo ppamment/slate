@@ -9,7 +9,7 @@ $artist = $this->artist;
         <hr/>
     </div>
     <div class="span4">
-        <h2><?php echo strtoupper($artist->getName()) ?></h2>
+        <h2><?php echo $artist->getName() ?></h2>
     </div>
     <div class="span4">
         <hr/>
