@@ -69,6 +69,10 @@ img{
     box-shadow: none;
     -webkit-box-shadow: none;
 }
+.thumbnail .caption{
+    color: #000000;
+    font-size: 17px;
+}
 
 
 .artists h4{
