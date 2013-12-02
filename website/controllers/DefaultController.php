@@ -44,4 +44,9 @@ class DefaultController extends Website_Controller_Action
 
         $this->view->artists = $artists;
     }
+
+    public function aboutAction()
+    {
+
+    }
 }
