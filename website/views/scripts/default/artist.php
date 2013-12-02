@@ -5,13 +5,13 @@ $artist = $this->artist;
 ?>
 
 <div class="row section_header">
-    <div class="span4">
+    <div class="span5">
         <hr/>
     </div>
-    <div class="span4">
+    <div class="span2">
         <h2><?php echo $artist->getName() ?></h2>
     </div>
-    <div class="span4">
+    <div class="span5">
         <hr/>
     </div>
 </div>
