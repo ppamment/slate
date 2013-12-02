@@ -10,7 +10,7 @@
     <div class="span4 newsletter">
         <div class="box">
             <h3><?php echo $this->input("subscribe") ?></h3>
-            <form>
+            <form method="post">
                 <div class="control-group">
                     <label class="control-label">First Name:</label>
                     <div class="controls">
