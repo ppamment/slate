@@ -28,8 +28,8 @@
             <hr>
         </div>
     </div>
-    <div class="row">
-        <div class="pull-right">
+    <div class="row footer">
+        <div class="span12">
             <p class="artwork-title"><?php echo $this->input("footer_text") ?></p>
         </div>
     </div>

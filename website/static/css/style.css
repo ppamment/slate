@@ -109,3 +109,8 @@ p.artwork-title{
     color: #808080;
     font-size: 15px;
 }
+
+.footer p{
+    width: 100%;
+    text-align: right;
+}
