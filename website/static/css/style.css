@@ -103,3 +103,8 @@ img{
 #bio{
     line-height: 115%;
 }
+
+p.artwork-title{
+    color: #808080;
+    font-size: 15px;
+}

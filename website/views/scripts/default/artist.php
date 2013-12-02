@@ -33,7 +33,7 @@ $artist = $this->artist;
                             </div>
 
                             <div class="caption">
-                                <p><?php echo $artwork->getTitle() ?></p>
+                                <p class="artwork-title"><?php echo $artwork->getTitle() ?></p>
 
                                 <p><?php echo $artwork->getDescription() ?></p>
                             </div>
