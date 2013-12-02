@@ -1,6 +1,7 @@
 body{
     font-family: Lato, Arial, sans-serif;
     background-color: #FFFFFF;
+    font-size: 16px;
 }
 body a, body a:hover {
     color: #000;
@@ -18,7 +19,7 @@ body a:hover {
 .navigation a{
     color: black;
     margin-right:25px;
-    font-size: 16px;
+
 }
 .navigation .active {
     color: grey;
