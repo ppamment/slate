@@ -51,7 +51,7 @@ $artist = $this->artist;
     </div>
     <div class="tab-pane" id="bio">
         <div class="span6">
-            <img src="<?php echo $artist->getCover()->getImage()->getThumbnail("grid-thumb") ?>" />
+            <img src="<?php echo $artist->getCover()->getImage() ?>" />
         </div>
         <div class="span5">
             <p><?php echo $artist->getBio() ?></p>
