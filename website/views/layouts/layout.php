@@ -23,6 +23,11 @@
         <?php echo $this->mainMenu() ?>
     </div>
     <?php echo $this->layout()->content ?>
+    <div class="row section_header">
+        <div class="span12">
+            <hr>
+        </div>
+    </div>
 </div>
 </body>
 </html>
