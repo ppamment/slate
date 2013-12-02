@@ -71,7 +71,9 @@ img{
 }
 .thumbnail .caption{
     color: #000000;
-    font-size: 17px;
+}
+.thumbnail h3{
+    font-size: 18px;
 }
 
 
