@@ -50,6 +50,7 @@ class DefaultController extends Website_Controller_Action
         $newsletter = $this->getRequest()->getParam("newsletter");
         if($newsletter){
             mail("alex@slateprojects.com", "Newsletter subscription", "<p>First Name: {$newsletter['first_name']}</p><p>Last Name: {$newsletter['last_name']}</p><p>Email: {$newsletter['email']}</p>");
+            $this->view->subscribed = true;
         }
 
     }
