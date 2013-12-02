@@ -4,5 +4,7 @@
     </div>
 </div>
 <div class="row">
-    <?php echo $this->wysiwyg("content") ?>
+    <div class="span12">
+        <?php echo $this->wysiwyg("content") ?>
+    </div>
 </div>
