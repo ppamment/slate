@@ -85,7 +85,7 @@ img{
     text-align: center;
     height: 240px;
     line-height: 240px;
-    background-color: #F5F5F5;
+    /*background-color: #F5F5F5;*/
 }
 .img-container img{
     margin: -3px auto 0px auto;
