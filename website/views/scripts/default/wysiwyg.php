@@ -9,5 +9,6 @@
         <hr/>
     </div>
 </div>
-
-<?php echo $this->wysiwyg("content") ?>
+<div class="row">
+    <?php echo $this->wysiwyg("content") ?>
+</div>
