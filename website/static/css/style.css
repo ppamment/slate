@@ -126,3 +126,12 @@ p.artwork-title{
 .newsletter h3{
     font-size: 18px;
 }
+
+span.date{
+    margin-left: 10px;
+    color: #808080;
+    font-size: 70%;
+}
+.mb10{
+    margin-bottom: 10px;
+}

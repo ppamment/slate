@@ -54,4 +54,54 @@ class DefaultController extends Website_Controller_Action
         }
 
     }
+
+    public function exhibitionsAction()
+    {
+        $viewKey = $this->getRequest()->getParam("view");
+
+        $exhibitions = new Object_Exhibition_List();
+        $exhibitions->setOrderKey("start");
+        $exhibitions->setOrder("DESC");
+
+        $exhibitions = $exhibitions->getObjects();
+
+        $upcoming = $current = $past = $view = array();
+
+        foreach($exhibitions as $exhibition){
+            /** @var Object_Exhibition $exhibition */
+            if($exhibition->getStart()->getTimestamp() > time()){
+                $upcoming[] = $exhibition;
+            } elseif($exhibition->getStart()->getTimestamp() < time() and $exhibition->getEnd()->getTimestamp() > time()){
+                $current[] = $exhibition;
+            } else {
+                $past[] = $exhibition;
+            }
+            if($exhibition->getKey() == $viewKey){
+                $view[] = $exhibition;
+            }
+        }
+
+        if(count($current) == 0 and count($upcoming) > 0){
+            $current[] = end($upcoming);
+        }
+        if(current($current) == current($view)){
+            $view = array();
+        }
+
+        if(count($view) > 0){
+            $active = "view";
+        } elseif(count($current) > 0){
+            $active = "current";
+        } elseif(count($upcoming) > 0){
+            $active = "upcoming";
+        } else {
+            $active = "past";
+        }
+
+        $this->view->upcoming = $upcoming;
+        $this->view->current = $current;
+        $this->view->past = $past;
+        $this->view->view = $view;
+        $this->view->active = $active;
+    }
 }
