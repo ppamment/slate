@@ -12,6 +12,25 @@
     <script src="http://code.jquery.com/jquery.js"></script>
     <script type="text/javascript" src="/website/static/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/website/static/js/bootstrap-lightbox.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var lightboxes = $(".lightbox");
+            $(document).keydown(function(e){
+                if(e.which == 37 || e.which == 39){
+                    var open = $(".lightbox.in");
+                    if(open.length){
+                        var openIndex = lightboxes.index(open);
+                        var nextIndex = ((e.which == 37) ? openIndex-1 : openIndex+1);
+                        if(nextIndex >= 0 && nextIndex < lightboxes.length){
+                            var next = $(lightboxes.get(nextIndex));
+                            open.data("lightbox").hide();
+                            $("a[href=#"+next.attr("id")+"]").click();
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 <div class="container">
