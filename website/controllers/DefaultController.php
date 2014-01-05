@@ -104,4 +104,24 @@ class DefaultController extends Website_Controller_Action
         $this->view->view = $view;
         $this->view->active = $active;
     }
+
+    public function newsAction()
+    {
+        $news = new Object_NewsItem_List();
+        $news->setOrderKey("date");
+        $news->setOrder("DESC");
+
+        $news = $news->getObjects();
+
+        $this->view->news = $news;
+    }
+
+    public function newsitemAction()
+    {
+        $newsKey = $this->_getParam("news");
+        $news = new Object_NewsItem_List();
+        $news->setCondition("o_key = '" . $newsKey . "'");
+
+        $this->view->news = current($news->getObjects());
+    }
 }

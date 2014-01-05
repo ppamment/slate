@@ -135,3 +135,8 @@ span.date{
 .mb10{
     margin-bottom: 10px;
 }
+
+.news img{
+    display: block;
+    margin: auto;
+}
