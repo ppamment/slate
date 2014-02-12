@@ -17,7 +17,7 @@
 
 class Asset extends Pimcore_Model_Abstract implements Element_Interface {
 
-    public static $chmod = 0766;
+    public static $chmod = 0777;
 
     /**
      * possible types of an asset
