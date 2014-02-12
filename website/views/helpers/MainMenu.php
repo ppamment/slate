@@ -18,8 +18,13 @@ class Zend_View_Helper_MainMenu extends Zend_View_Helper_Abstract
         /* @var $pages Document_Page[] */
         $pages = Document::getConcreteById(1)->getChilds();
 
-        foreach( $pages as $page )
+        foreach( $pages as $k => $page )
         {
+            if(!($page instanceof Document_Page)){
+                unset($pages[$k]);
+                continue;
+            }
+
             /** @var $doc Document_Page */
             $doc = $this->view->document;;
             do{
