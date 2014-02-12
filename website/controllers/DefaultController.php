@@ -6,6 +6,8 @@ class DefaultController extends Website_Controller_Action
     public function preDispatch()
     {
         $this->enableLayout();
+        $this->view->headTitle()->setSeparator(" - ");
+        $this->view->headTitle("Slate Projects");
     }
 
     public function homeAction()
@@ -15,7 +17,7 @@ class DefaultController extends Website_Controller_Action
 
 	public function wysiwygAction ()
     {
-
+        $this->view->headTitle($this->view->document->getTitle());
 	}
 
     public function artistAction ()
@@ -25,6 +27,9 @@ class DefaultController extends Website_Controller_Action
         $artists->setCondition("o_key = '" . $artistKey . "'");
 
         $this->view->artist = current($artists->getObjects());
+
+        $this->view->headTitle("Artist");
+        $this->view->headTitle($this->view->artist->getName());
     }
 
     public function artistsAction()
@@ -43,6 +48,8 @@ class DefaultController extends Website_Controller_Action
         });
 
         $this->view->artists = $artists;
+
+        $this->view->headTitle("Artists");
     }
 
     public function aboutAction()
@@ -52,7 +59,7 @@ class DefaultController extends Website_Controller_Action
             mail("alex@slateprojects.com", "Newsletter subscription", "<p>First Name: {$newsletter['first_name']}</p><p>Last Name: {$newsletter['last_name']}</p><p>Email: {$newsletter['email']}</p>");
             $this->view->subscribed = true;
         }
-
+        $this->view->headTitle("About");
     }
 
     public function exhibitionsAction()
@@ -103,6 +110,16 @@ class DefaultController extends Website_Controller_Action
         $this->view->past = $past;
         $this->view->view = $view;
         $this->view->active = $active;
+
+        $this->view->headTitle("Exhibitions");
+        if(count($view) > 0)
+        {
+            $ex = current($view);
+            $this->view->headTitle($ex->getName());
+        } elseif(count($current) > 0){
+            $ex = current($current);
+            $this->view->headTitle($ex->getName());
+        }
     }
 
     public function newsAction()
@@ -114,6 +131,8 @@ class DefaultController extends Website_Controller_Action
         $news = $news->getObjects();
 
         $this->view->news = $news;
+
+        $this->view->headTitle("News");
     }
 
     public function newsitemAction()
@@ -123,5 +142,8 @@ class DefaultController extends Website_Controller_Action
         $news->setCondition("o_key = '" . $newsKey . "'");
 
         $this->view->news = current($news->getObjects());
+
+        $this->view->headTitle("News");
+        $this->view->headTitle($this->view->news->getTitle());
     }
 }
