@@ -12,12 +12,13 @@ class DefaultController extends Website_Controller_Action
 
     public function homeAction()
     {
-
+        $this->view->headMeta()->appendName("description", $this->view->document->getDescription());
     }
 
 	public function wysiwygAction ()
     {
         $this->view->headTitle($this->view->document->getTitle());
+        $this->view->headMeta()->appendName("description", $this->view->document->getDescription());
 	}
 
     public function artistAction ()
@@ -30,6 +31,7 @@ class DefaultController extends Website_Controller_Action
 
         $this->view->headTitle("Artist");
         $this->view->headTitle($this->view->artist->getName());
+        $this->view->headMeta()->appendName("description", $this->view->artist->getBio());
     }
 
     public function artistsAction()
@@ -50,6 +52,7 @@ class DefaultController extends Website_Controller_Action
         $this->view->artists = $artists;
 
         $this->view->headTitle("Artists");
+        $this->view->headMeta()->appendName("description", $this->view->document->getDescription());
     }
 
     public function aboutAction()
@@ -60,6 +63,7 @@ class DefaultController extends Website_Controller_Action
             $this->view->subscribed = true;
         }
         $this->view->headTitle("About");
+        $this->view->headMeta()->appendName("description", $this->view->document->getDescription());
     }
 
     public function exhibitionsAction()
@@ -116,10 +120,13 @@ class DefaultController extends Website_Controller_Action
         {
             $ex = current($view);
             $this->view->headTitle($ex->getName());
+            $this->view->headMeta($ex->getDescription());
         } elseif(count($current) > 0){
             $ex = current($current);
             $this->view->headTitle($ex->getName());
+            $this->view->headMeta()->appendName("description", $ex->getDescription());
         }
+
     }
 
     public function newsAction()
@@ -133,6 +140,7 @@ class DefaultController extends Website_Controller_Action
         $this->view->news = $news;
 
         $this->view->headTitle("News");
+        $this->view->headMeta()->appendName("description", $this->view->document->getDescription());
     }
 
     public function newsitemAction()
@@ -145,5 +153,6 @@ class DefaultController extends Website_Controller_Action
 
         $this->view->headTitle("News");
         $this->view->headTitle($this->view->news->getTitle());
+        $this->view->headMeta()->appendName("description", $this->view->news->getTitle() . " - " . $this->view->news->getSubtitle());
     }
 }
