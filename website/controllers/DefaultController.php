@@ -120,7 +120,7 @@ class DefaultController extends Website_Controller_Action
         {
             $ex = current($view);
             $this->view->headTitle($ex->getName());
-            $this->view->headMeta($ex->getDescription());
+            $this->view->headMeta()->appendName("description", $ex->getDescription());
         } elseif(count($current) > 0){
             $ex = current($current);
             $this->view->headTitle($ex->getName());
