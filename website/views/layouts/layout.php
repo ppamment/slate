@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/website/static/css/bootstrap/bootstrap-responsive.min.css"/>
     <link rel="stylesheet" href="/website/static/css/bootstrap-lightbox.min.css"/>
     <link rel="stylesheet" href="/website/static/css/style.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script type="text/javascript" src="/website/static/js/bootstrap.min.js"></script>
