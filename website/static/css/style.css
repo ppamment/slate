@@ -140,3 +140,12 @@ span.date{
     display: block;
     margin: auto;
 }
+
+.align-right{
+    text-align: right;
+}
+
+.footer img{
+    height: 18px;
+    margin-top: -3px;
+}

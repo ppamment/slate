@@ -135,9 +135,12 @@ class DefaultController extends Website_Controller_Action
         $news->setOrderKey("date");
         $news->setOrder("DESC");
 
-        $news = $news->getObjects();
-
-        $this->view->news = $news;
+        $allNews = $news->getObjects();
+        $chunked = array(0 => array(), 1 => array());
+        foreach($allNews as $k => $item){
+            $chunked[$k%2][] = $item;
+        }
+        $this->view->news = $chunked;
 
         $this->view->headTitle("News");
         $this->view->headMeta()->appendName("description", $this->view->document->getDescription());

@@ -25,5 +25,6 @@
     </div>
     <div class="span6">
         <?php echo $this->exhibition->getDescription() ?>
+        <?php if($pdf = $this->exhibition->getPdf()) : ?><a target="_blank" href="<?php echo $pdf->getFullPath() ?>">View PDF</a><?php endif; ?>
     </div>
 </div>

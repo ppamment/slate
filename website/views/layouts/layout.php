@@ -51,8 +51,11 @@
         </div>
     </div>
     <div class="row footer">
-        <div class="span12">
-            <p class="artwork-title"><?php echo $this->input("footer_text") ?></p>
+        <div class="span8">
+            <p class="artwork-title">© Slate Projects 2014 | +44 (0)7792 302850 | alex@slateprojects.com | open by appointment</p>
+        </div>
+        <div class="span4">
+            <p class="artwork-title align-right"><a href="https://twitter.com/slateprojects"><img src="/website/static/img/twitter.png" /> Twitter</a> | <a href="http://instagram.com/alexslateprojects"><img src="/website/static/img/instagram.PNG" /> Instagram</a></p>
         </div>
     </div>
 </div>
