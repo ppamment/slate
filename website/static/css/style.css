@@ -88,7 +88,8 @@ img{
     /*background-color: #F5F5F5;*/
 }
 .img-container img{
-    margin: -3px auto 0px auto;
+    margin: auto;
+    padding-top: 10px;
     max-height: 100%;
     max-width: 100%;
     vertical-align: middle;
