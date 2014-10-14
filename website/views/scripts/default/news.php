@@ -17,7 +17,7 @@
                         <div class="caption span3">
                             <p><strong><?php echo $news->getTitle() ?></strong></p>
                             <p class="artwork-title"><?php echo $news->getSubtitle() ?></p>
-                            <p><small><?php echo substr(strip_tags($news->getBody()),0,200) ?></small></p>
+                            <p><small><?php echo strtok(wordwrap(strip_tags($news->getBody()), 200, "...\n"), "\n") ?></small></p>
                             <p><small>MORE</small></p>
                         </div>
                     </div>
