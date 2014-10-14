@@ -141,6 +141,10 @@ span.date{
     margin: auto;
 }
 
+.news .thumbnail{
+    min-height: 280px;
+}
+
 .align-right{
     text-align: right;
 }
