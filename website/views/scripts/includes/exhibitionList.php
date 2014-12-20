@@ -6,7 +6,7 @@
             <div class="thumbnail">
                 <a class="" href="?view=<?php echo $exhibition->getKey() ?>">
                     <div class="img-container">
-                        <img src="<?php $first = current($exhibition->getArtworks()); echo $first->getImage()->getThumbnail("grid-thumb") ?>" />
+                        <img src="<?php $first = count($exhibition->getInstallationViews()) > 0 ? current($exhibition->getInstallationViews()) : current($exhibition->getArtworks()); echo $first->getImage()->getThumbnail("grid-thumb") ?>" />
                     </div>
                     <div class="caption">
                         <p><?php echo $exhibition->getName() ?></p>
