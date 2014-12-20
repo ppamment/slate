@@ -14,7 +14,7 @@
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script type="text/javascript" src="/website/static/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/website/static/js/bootstrap-lightbox.min.js"></script>
+    <script type="text/javascript" src="/website/static/js/bootstrap-lightbox.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             var lightboxes = $(".lightbox");
