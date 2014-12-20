@@ -72,10 +72,18 @@ img{
 .thumbnail .caption{
     color: #000000;
 }
+.thumbnails li{
+    display: inline-block;
+}
 .thumbnail h3{
     font-size: 18px;
 }
-
+.caption p{
+    text-align: center;
+}
+.caption h3{
+    text-align: center;
+}
 
 .artists h4{
     margin-bottom: 40px;
@@ -83,9 +91,8 @@ img{
 
 .img-container{
     text-align: center;
-    height: 240px;
-    line-height: 240px;
-    /*background-color: #F5F5F5;*/
+    height: 252px;
+    line-height: 252px;
 }
 .img-container img{
     margin: auto;
@@ -93,9 +100,6 @@ img{
     max-height: 100%;
     max-width: 100%;
     vertical-align: middle;
-}
-.thumbnails.artist li{
-    min-height: 440px;
 }
 
 .tab-content{

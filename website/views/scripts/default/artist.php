@@ -55,6 +55,7 @@ $artist = $this->artist;
         </div>
         <div class="span5">
             <p><?php echo $artist->getBio() ?></p>
+            <?php if($pdf = $this->artist->getPdf()) : ?><a target="_blank" href="<?php echo $pdf->getFullPath() ?>">View biography/CV</a><?php endif; ?>
         </div>
     </div>
 </div>
