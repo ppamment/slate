@@ -40,7 +40,7 @@
 
     <div class="row">
         <div class="span2 offset1">
-            <a href="/"><img src="/website/static/img/Logo_large.png" width="163" height="100"></a>
+            <a href="/"><img src="/website/static/img/Logo_large.png" width="109" height="67"></a>
         </div>
         <?php echo $this->mainMenu() ?>
     </div>
@@ -55,7 +55,7 @@
             <p class="artwork-title">© Slate Projects <?php echo date("Y") ?> | +44 (0)7792 302850 | alex@slateprojects.com | open by appointment</p>
         </div>
         <div class="span4">
-            <p class="artwork-title align-right"><a href="https://twitter.com/slateprojects"><img src="/website/static/img/twitter.png" /> Twitter</a> | <a href="http://instagram.com/alexslateprojects"><img src="/website/static/img/instagram.PNG" /> Instagram</a></p>
+            <p class="artwork-title align-right"><a href="https://twitter.com/slateprojects"><img src="/website/static/img/twitter.png" /> Twitter</a> | <a href="https://www.instagram.com/theaverardhotel/"><img src="/website/static/img/instagram.PNG" /> Instagram</a></p>
         </div>
     </div>
 </div>
