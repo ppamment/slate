@@ -40,7 +40,7 @@
 
     <div class="row">
         <div class="span2 offset1">
-            <a href="/"><img src="/website/static/img/Logo_large.png" width="109" height="67"></a>
+            <a href="/"><img src="<?php echo ($this->logo == 'slate' ? '/website/static/img/Logo_large.png' : '/website/static/img/averardhotel_web.jpg') ?>" width="109" height="67"></a>
         </div>
         <?php echo $this->mainMenu() ?>
     </div>

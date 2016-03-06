@@ -7,7 +7,14 @@ class DefaultController extends Website_Controller_Action
     {
         $this->enableLayout();
         $this->view->headTitle()->setSeparator(" - ");
-        $this->view->headTitle("Slate Projects");
+        $conf = Pimcore_Config::getSystemConfig();
+        if($conf->general->site == "averard"){
+            $this->view->headTitle("Slate Projects");
+            $this->view->logo = "averard";
+        } else {
+            $this->view->headTitle("Slate Projects");
+            $this->view->logo = "slate";
+        }
     }
 
     public function homeAction()
