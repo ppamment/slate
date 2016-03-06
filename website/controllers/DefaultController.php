@@ -9,7 +9,7 @@ class DefaultController extends Website_Controller_Action
         $this->view->headTitle()->setSeparator(" - ");
         $conf = Pimcore_Config::getSystemConfig();
         if($conf->general->site == "averard"){
-            $this->view->headTitle("Slate Projects");
+            $this->view->headTitle("The Averard Hotel");
             $this->view->logo = "averard";
         } else {
             $this->view->headTitle("Slate Projects");
