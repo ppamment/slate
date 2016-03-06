@@ -10,10 +10,10 @@ class DefaultController extends Website_Controller_Action
         $conf = Pimcore_Config::getSystemConfig();
         if($conf->general->site == "averard"){
             $this->view->headTitle("The Averard Hotel");
-            $this->view->logo = "averard";
+            $this->view->site = "averard";
         } else {
             $this->view->headTitle("Slate Projects");
-            $this->view->logo = "slate";
+            $this->view->site = "slate";
         }
     }
 
