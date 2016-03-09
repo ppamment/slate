@@ -52,7 +52,7 @@
     </div>
     <div class="row footer">
         <div class="span8">
-            <p class="artwork-title">© Slate Projects <?php echo date("Y") ?> | +44 (0)7792 302850 | alex@slateprojects.com | open by appointment</p>
+            <p class="artwork-title"><?php if($this->site != "averard") : ?>© Slate Projects <?php echo date("Y") ?> | <?php endif; ?>+44 (0)7792 302850 | alex@slateprojects.com | open by appointment</p>
         </div>
         <div class="span4">
             <p class="artwork-title align-right"><?php if($this->site != "averard") : ?><a href="https://twitter.com/slateprojects"><img src="/website/static/img/twitter.png" /> Twitter</a> | <?php endif; ?><a href="https://www.instagram.com/theaverardhotel/"><img src="/website/static/img/instagram.PNG" /> Instagram</a></p>
