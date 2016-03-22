@@ -51,12 +51,27 @@
         </div>
     </div>
     <div class="row footer">
-        <div class="span8">
-            <p class="artwork-title">© Slate Projects <?php echo date("Y") ?> | +44 (0)7792 302850 | alex@slateprojects.com | open by appointment</p>
-        </div>
-        <div class="span4">
-            <p class="artwork-title align-right"><?php if($this->site != "averard") : ?><a href="https://twitter.com/slateprojects"><img src="/website/static/img/twitter.png" /> Twitter</a> | <?php endif; ?><a href="https://www.instagram.com/theaverardhotel/"><img src="/website/static/img/instagram.PNG" /> Instagram</a></p>
-        </div>
+        <?php if($this->site != "averard") : ?>
+            <div class="span8">
+                <p class="artwork-title">© Slate Projects <?php echo date("Y") ?> | +44 (0)7792 302850 | alex@slateprojects.com | open by appointment</p>
+            </div>
+            <div class="span4">
+                <p class="artwork-title align-right">
+                    <a href="https://twitter.com/slateprojects"><img src="/website/static/img/twitter.png" /> Twitter</a> | <a href="https://www.instagram.com/slateprojects/"><img src="/website/static/img/instagram.PNG" /> Instagram</a>
+                </p>
+            </div>
+        <?php else : ?>
+            <div class="span6">
+                <p class="artwork-title">
+                    Alex Meurice | +44 (0)7792 302850 | alex@slateprojects.com | <a href="https://www.instagram.com/theaverardhotel/"><img src="/website/static/img/instagram.PNG" /> Instagram</a>
+                </p>
+            </div>
+            <div class="span6">
+                <p class="artwork-title align-right">
+                    Viktor Wang | +44 (0)7706 799658 | info@viktorwang.com | <a href="https://www.instagram.com/viktorwang/"><img src="/website/static/img/instagram.PNG" /> Instagram</a>
+                </p>
+            </div>
+        <?php endif; ?>
     </div>
 </div>
 </body>
