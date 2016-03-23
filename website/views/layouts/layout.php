@@ -68,7 +68,7 @@
             </div>
             <div class="span6">
                 <p class="artwork-title align-right">
-                    Viktor Wang | +44 (0)7706 799658 | info@viktorwang.com | <a href="https://www.instagram.com/viktorwang/"><img src="/website/static/img/instagram.PNG" /> Instagram</a>
+                    Victor Wang | +44 (0)7706 799658 | info@viktorwang.com | <a href="https://www.instagram.com/viktorwang/"><img src="/website/static/img/instagram.PNG" /> Instagram</a>
                 </p>
             </div>
         <?php endif; ?>
