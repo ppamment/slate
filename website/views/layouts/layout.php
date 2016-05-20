@@ -66,11 +66,6 @@
                     Alex Meurice | +44 (0)7792 302850 | alex@theaverardhotel.com | <a href="https://www.instagram.com/theaverardhotel/"><img src="/website/static/img/instagram.PNG" /> Instagram</a>
                 </p>
             </div>
-            <div class="span6">
-                <p class="artwork-title align-right">
-                    Victor Wang | +44 (0)7706 799658 | info@viktorwang.com | <a href="https://www.instagram.com/viktorwang/"><img src="/website/static/img/instagram.PNG" /> Instagram</a>
-                </p>
-            </div>
         <?php endif; ?>
     </div>
 </div>
